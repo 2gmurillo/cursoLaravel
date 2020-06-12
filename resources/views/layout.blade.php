@@ -10,15 +10,11 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul class="navbar__menu">
-      <li class="navbar__menu--item"><a class="link" href="/">Home</a></li>
-      <li class="navbar__menu--item"><a class="link" href="/about">About</a></li>
-      <li class="navbar__menu--item"><a class="link" href="/portfolio">Portfolio</a></li>
-      <li class="navbar__menu--item"><a class="link" href="/contact">Contact</a></li>
-    </ul>
-  </nav>
-  @yield('content')
+  @include('partials.nav')
+  <section class="content">
+    @yield('content')
+  </section>
+  @include('partials.footer')
 </body>
 
 </html>

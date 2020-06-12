@@ -1,0 +1,20 @@
+@mixin df-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin df-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin input {
+    width: 100%;
+    background-color: #f2f2f2;
+    color: #2f2f2f;
+    border: 1px solid #2f2f2f;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px 0;
+}

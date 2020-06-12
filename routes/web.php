@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+App::setlocale('es');
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
-Route::view('/portfolio', 'portfolio')->name('portfolio');
+Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::view('/contact', 'contact')->name('contact');
+Route::post('/contact', 'MessagesController@store')->name('contact');

@@ -1,49 +1,35 @@
-@mixin df-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-@mixin df-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "features";
+@import "components";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.link {
-    @include df-row;
-    text-decoration: none;
-    color: inherit;
-    border-radius: inherit;
-    height: 100%;
-    width: 100%;
+body {
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "navbar"
+        "content"
+        "footer";
 }
 .navbar {
-    @include df-row;
+    grid-area: navbar;
+    border: 1px solid black;
+}
+.content {
+    grid-area: content;
+    width: 1080px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px - 80px);
+    @include df-col;
+    border: 1px solid black;
+}
+.footer {
+    grid-area: footer;
     height: 80px;
+    border: 1px solid black;
 }
-.navbar__menu {
-    @include df-row;
-    height: inherit;
-    list-style: none;
-}
-.navbar__menu--item {
-    @include df-row;
-    height: 80%;
-    min-width: 100px;
-    margin: 0 10px;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    :hover {
-        transition: 200ms;
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-    }
-}
+@import "navbar";
