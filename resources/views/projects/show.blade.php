@@ -6,4 +6,8 @@
 <div class="button">
   <a class="link" href="{{ route('projects.edit', $project) }}">@lang('Edit')</a>
 </div>
+<div class="button">
+  <a class="link" href="{{ route('projects.delete', $project) }}">@lang('Delete')</a>
+</div>
+
 @endsection

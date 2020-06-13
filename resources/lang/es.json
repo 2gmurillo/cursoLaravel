@@ -66,5 +66,9 @@
     "Create": "Crear",
     "You'd better put the title": "Más te vale poner el título",
     "Edit": "Editar",
-    "Update": "Actualizar"
+    "Update": "Actualizar",
+    "Delete": "Borrar",
+    "Are you sure you want to delete this proyect": "¿Seguro desea eliminar este proyecto",
+    "Yes": "Sí",
+    "No": "No"
 }
