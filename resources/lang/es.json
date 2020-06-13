@@ -52,7 +52,9 @@
     "If you dont'n give me your name, I will not allow you to enter": "Si no me dices tu nombre, no te permitiré entrar",
     "The mail has been sent": "El correo ha sido enviado",
     "Message received": "Mensaje recibido",
-    "You have received a message from:": "Has recibido un mensaje de:",
-    "Subject:": "Asunto:",
-    "Content:": "Contenido:"
+    "You have received a message from": "Has recibido un mensaje de",
+    "Subject": "Asunto",
+    "Content": "Contenido",
+    "Your name": "Tu nombre",
+    "Your email": "Tu email"
 }
