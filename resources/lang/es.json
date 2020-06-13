@@ -57,5 +57,11 @@
     "Content": "Contenido",
     "Your name": "Tu nombre",
     "Your email": "Tu email",
-    "No projects": "Sin proyectos"
+    "No projects": "Sin proyectos",
+    "Create a new project": "Crear un nuevo proyecto",
+    "The project title": "Título del proyecto",
+    "The project url": "URL del proyecto",
+    "Description": "Descripción",
+    "Save": "Guardar",
+    "Create": "Crear"
 }
