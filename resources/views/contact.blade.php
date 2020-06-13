@@ -11,7 +11,7 @@
 </div>
 @endif -->
 
-<form class="form" action="{{ route('contact') }}" method="POST">
+<form class="form" action="{{ route('messages.store') }}" method="POST">
   @csrf
   <input class="input" type="text" name="name" placeholder="@lang('Your name')" value="{{old('name')}}">
   {!! $errors->first('name', '<p class="error-msg">:message</p>') !!}
