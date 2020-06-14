@@ -1,16 +1,6 @@
 @extends('layout')
 @section('content')
 <h1>{{__('Contact')}}</h1>
-
-<!-- @if($errors->any())
-<div class="error">
-  @foreach($errors->all() as $error)
-  <p>{{ $error }}</p>
-  @endforeach
-  <a class="link button" href="/contact">Volver</a>
-</div>
-@endif -->
-
 <form class="form" action="{{ route('messages.store') }}" method="POST">
   @csrf
   <input class="input" type="text" name="name" placeholder="@lang('Your name')" value="{{old('name')}}">

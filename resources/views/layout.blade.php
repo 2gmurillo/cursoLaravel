@@ -12,6 +12,8 @@
 <body>
   @include('partials.nav')
   <section class="content">
+    @include('partials.session-status')
+
     @yield('content')
   </section>
   @include('partials.footer')

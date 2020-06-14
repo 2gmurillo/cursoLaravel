@@ -70,5 +70,8 @@
     "Delete": "Borrar",
     "Are you sure you want to delete this proyect": "¿Seguro desea eliminar este proyecto",
     "Yes": "Sí",
-    "No": "No"
+    "No": "No",
+    "Project has been created": "El proyeto ha sido creado",
+    "Project has been updated": "El proyeto ha sido actualizado",
+    "Project has been deleted": "El proyeto ha sido eliminado"
 }
