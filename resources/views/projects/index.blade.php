@@ -1,9 +1,11 @@
 @extends('layout')
 @section('content')
 <h1>{{__('Portfolio')}}</h1>
+@auth
 <div class="button">
   <a class="link" href="{{ route('projects.create') }}">@lang('Create')</a>
 </div>
+@endauth
 <ul>
   @forelse ($projects as $project)
   <li>
