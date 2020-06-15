@@ -6,11 +6,11 @@
   <a class="link" href="{{ route('projects.create') }}">@lang('Create')</a>
 </div>
 @endauth
-<ul>
+<ul class="projects__list">
   @forelse ($projects as $project)
-  <li>
-    <a href="{{ route('projects.show', $project) }}">
-      {{ $project->title }}
+  <li class="projects__item">
+    <a class="projects__item--link" href="{{ route('projects.show', $project) }}">
+      <span class="projects__item--title">{{ $project->title }}</span><span class="projects__item--date">{{$project->created_at->format('d/m/y')}}</span>
     </a>
   </li>
   @empty

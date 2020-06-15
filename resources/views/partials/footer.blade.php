@@ -1,3 +1,3 @@
 <footer class="footer">
-  <pre>Footer</pre>
+  <p>{{config('app.name')}} | Copyright @ {{ date('Y') }}</p>
 </footer>

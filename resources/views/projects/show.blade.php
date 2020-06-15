@@ -1,8 +1,16 @@
 @extends('layout')
 @section('content')
-<h1>{{$project->title}}</h1>
-<p>{{$project->description}}</p>
-<p>{{$project->created_at->diffForHumans()}}</p>
+<div class="card">
+  <div class="card__title">
+    <h1>{{$project->title}}</h1>
+  </div>
+  <div class="card__description">
+    <div class="card__description--container">
+      <p>{{$project->description}}</p>
+      <p>{{$project->created_at->diffForHumans()}}</p>
+    </div>
+  </div>
+</div>
 @auth
 <div class="button">
   <a class="link" href="{{ route('projects.edit', $project) }}">@lang('Edit')</a>

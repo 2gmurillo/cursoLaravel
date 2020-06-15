@@ -4,6 +4,8 @@
 
 <form class="form" action="{{ route('projects.store') }}" method="POST">
   @include('projects._form', ['buttonText'=>'Save'])
-
+  <div class="button">
+    <a class="link" href="{{ route('projects.index') }}">@lang('Back')</a>
+  </div>
 </form>
 @endsection
