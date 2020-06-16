@@ -473,6 +473,36 @@ h1 {
   text-align: center;
 }
 
+#file {
+  width: 100%;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#file__button {
+  height: 100%;
+  padding: 10px 15px;
+  border-radius: inherit;
+  border: none;
+}
+
+#file__button:hover {
+  cursor: pointer;
+}
+
+#file__text {
+  height: 100%;
+  padding: 10px 15px;
+}
+
 body {
   background-color: #f2f2f2;
   display: grid;

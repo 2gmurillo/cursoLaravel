@@ -2,7 +2,7 @@
 @section('content')
 <h1>{{__('Edit') . ' ' . $project->title}}</h1>
 
-<form class="form" action="{{ route('projects.update', $project) }}" method="POST">
+<form class="form" action="{{ route('projects.update', $project) }}" method="POST" enctype="multipart/form-data">
   @method('PATCH')
   @include('projects._form', ['buttonText'=>'Update'])
   <div class="button">
