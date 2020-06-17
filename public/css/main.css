@@ -570,47 +570,86 @@ body {
 }
 
 .projects__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 500px);
+  justify-content: center;
+}
+
+.card2 {
+  background-color: white;
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 275px 125px;
+  grid-template-areas: "card2__image" "card2__description";
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card2__image {
+  grid-area: card2__image;
+  width: inherit;
+  height: 100%;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2__image img {
+  height: 100%;
+}
+
+.card2__description {
+  grid-area: card2__description;
+  background-color: rgba(0, 0, 0, 0.75);
+  font-size: 1.2em;
+}
+
+.card2__description p {
+  margin: 10px 0;
+}
+
+.card2__description--container {
+  width: 350px;
+  height: 200px;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  list-style: none;
-  max-width: 400px;
+  bottom: 25px;
+  left: 25px;
+  border-radius: 20px;
+  color: #f2f2f2;
 }
 
-.projects__list .projects__item {
-  width: 100%;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  margin: 5px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 255, 0.2);
-}
-
-.projects__list .projects__item .projects__item--link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px;
-  color: inherit;
-  border-radius: inherit;
-  text-decoration: none;
-}
-
-.projects__list .projects__item .projects__item--link .projects__item--date {
-  color: #2f2f2f;
-}
-
-.projects__item:hover {
+.btn {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  color: #f2f2f2;
+  font-size: 1em;
   cursor: pointer;
+  border: 1px solid #f2f2f2;
+}
+
+.btn:hover {
+  border: 1px solid #2f2f2f;
   background-color: #f2f2f2;
   color: #2f2f2f;
-  border: 1px solid #2f2f2f;
 }
 
 .card {

@@ -6,20 +6,28 @@
   <a class="link" href="{{ route('projects.create') }}">@lang('Create')</a>
 </div>
 @endauth
-<ul class="projects__list">
+<div class="projects__list">
   @forelse ($projects as $project)
-  <li class="projects__item">
-    <a class="projects__item--link" href="{{ route('projects.show', $project) }}">
+  <div class="card2">
+    <div class="card2__image">
       @if ($project->image)
       <img src="/storage/{{ $project->image }}" alt="{{ $project->title }}">
+      @else
+      <img src="/storage/images/juango.png" alt="{{ $project->title }}">
       @endif
-      <span class="projects__item--title">{{ $project->title }}</span><span
-        class="projects__item--date">{{$project->created_at->format('d/m/y')}}</span>
-    </a>
-  </li>
+    </div>
+    <div class="card2__description">
+      <div class="card2__description--container">
+        <h3>{{ $project->title }}</h3>
+        <p>{{$project->created_at->format('d/m/y')}}</p>
+        <button class="btn"><a class="projects__item--link link"
+            href="{{ route('projects.show', $project) }}">Ver</a></button>
+      </div>
+    </div>
+  </div>
   @empty
   <p>@lang('No projects')</p>
   @endforelse
-</ul>
+</div>
 {{$projects->links()}}
 @endsection
