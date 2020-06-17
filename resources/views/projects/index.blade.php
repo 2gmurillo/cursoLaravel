@@ -10,7 +10,11 @@
   @forelse ($projects as $project)
   <li class="projects__item">
     <a class="projects__item--link" href="{{ route('projects.show', $project) }}">
-      <span class="projects__item--title">{{ $project->title }}</span><span class="projects__item--date">{{$project->created_at->format('d/m/y')}}</span>
+      @if ($project->image)
+      <img src="/storage/{{ $project->image }}" alt="{{ $project->title }}">
+      @endif
+      <span class="projects__item--title">{{ $project->title }}</span><span
+        class="projects__item--date">{{$project->created_at->format('d/m/y')}}</span>
     </a>
   </li>
   @empty
