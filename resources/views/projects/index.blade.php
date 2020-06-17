@@ -26,7 +26,8 @@
     </div>
   </div>
   @empty
-  <p>@lang('No projects')</p>
+  <p class="no-projects">@lang('No projects')</p>
+  <p class="no-projects">@lang('No projects')</p>
   @endforelse
 </div>
 {{$projects->links()}}

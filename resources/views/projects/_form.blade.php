@@ -4,10 +4,10 @@
   <p id="file__text">@lang('Project image')</p>
   <button id="file__button" type="button">@lang('Open')</button>
 </div>
+{!! $errors->first('image', '<p class="error-msg">:message</p>') !!}
 
 <input class="input" type="text" name="title" placeholder="@lang('The project title')"
   value="{{old('title', $project->title)}}">
-{!! $errors->first('title', '<p class="error-msg">:message</p>') !!}
 
 <input class="input" type="text" name="url" placeholder="@lang('The project url')"
   value="{{old('url', $project->url)}}">
