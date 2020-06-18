@@ -55,6 +55,9 @@
     border-radius: 20px;
     color: #f2f2f2;
 }
+.card__buttons {
+    margin-bottom: 20px;
+}
 .btn {
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0);
@@ -76,13 +79,22 @@
     max-width: 90%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
         "card__title"
+        "card__image"
         "card__description";
 }
 .card__title {
     grid-area: card__title;
+    margin: 20px auto;
+}
+.card__image {
+    grid-area: card__image;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 .card__description {
     grid-area: card__description;
@@ -100,6 +112,10 @@
     font-size: 1.75em;
     border-radius: 20px;
     color: #f2f2f2;
+}
+.card__buttons {
+    display: flex;
+    justify-content: space-around;
 }
 .no-projects {
     @include df-col;

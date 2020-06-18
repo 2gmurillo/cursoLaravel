@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /* Agregando un nuevo provider para Interventio Image */
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -227,6 +230,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /* Agregando un nuevo aliases para Intervention Image */
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

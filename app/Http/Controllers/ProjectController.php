@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SaveProjectRequest;
 use App\Project;
+use Image;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\SaveProjectRequest;
 
 class ProjectController extends Controller
 {
@@ -40,6 +41,9 @@ class ProjectController extends Controller
         $project = new Project($request->validated());
         $project->image = $request->file('image')->store('images');
         $project->save();
+        $image = Image::make(Storage::get($project->image));
+        $image->widen(500)->encode();
+        Storage::put($project->image, (string) $image);
         return redirect()->route('projects.index')->with('status', __('Project has been created'));
     }
 
@@ -57,6 +61,9 @@ class ProjectController extends Controller
             $project->fill($request->validated());
             $project->image = $request->file('image')->store('images');
             $project->save();
+            $image = Image::make(Storage::get($project->image));
+            $image->widen(500)->encode();
+            Storage::put($project->image, (string) $image);
         } else {
             $project->update(array_filter($request->validated()));
         }
